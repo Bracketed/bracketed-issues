@@ -1,0 +1,36 @@
+name: Error Found
+description: Report an error for Bracketed or BracketedBeta!
+labels: [error]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Describe your error here."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: commandtype
+    attributes:
+      label: "What type of command type is erroring?"
+      options:
+        - Context Menu
+        - Slash Commands
+    validations:
+      required: true
+
+  - type: input
+    id: command
+    attributes:
+      label: "What is the name of this command?"
+      placeholder: "I'm not sure..."
+    validations:
+      required: false
+
+  - type: input
+    id: errorintensity
+    attributes:
+      label: "How intense is this error?"
+      placeholder: "I'm not sure..."
+    validations:
+      required: true
